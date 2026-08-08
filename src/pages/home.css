@@ -31,6 +31,36 @@
   max-width: 420px;
 }
 
+.home__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.home__tab {
+  padding: 8px 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(28, 43, 34, 0.15);
+  background: #fff;
+  color: var(--color-ink);
+  font-size: 0.82rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.home__tab:hover {
+  border-color: var(--color-emerald-mid);
+}
+
+.home__tab--active {
+  background: var(--color-emerald-deep);
+  border-color: var(--color-emerald-deep);
+  color: #fff;
+}
+
 .home__grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));

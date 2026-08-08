@@ -6,8 +6,14 @@
 
 import { lazy } from "react";
 import Thumbnail1 from "./template1/Thumbnail";
+import Thumbnail2 from "./template2/Thumbnail";
 
 const Template1 = lazy(() => import("./template1/Template1"));
+const Template2 = lazy(() => import("./template2/Template2"));
+
+export const RELIGIONS = [
+  { id: "muslim", label: "Muslim" },
+];
 
 const templates = [
   {
@@ -16,6 +22,16 @@ const templates = [
     description: "Islamic-inspired design in emerald & gold with Qur'anic verses.",
     component: Template1,
     thumbnail: Thumbnail1,
+    religion: "muslim",
+    status: "ready",
+  },
+  {
+    id: "gold-frame",
+    name: "Gold Frame",
+    description: "A simple Muslim invitation — white background, gold borders, square frames.",
+    component: Template2,
+    thumbnail: Thumbnail2,
+    religion: "muslim",
     status: "ready",
   },
   {
@@ -24,6 +40,7 @@ const templates = [
     description: "Another design is on the way — check back soon.",
     component: null,
     thumbnail: null,
+    religion: null,
     status: "coming-soon",
   },
 ];

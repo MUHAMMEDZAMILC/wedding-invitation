@@ -1,0 +1,53 @@
+.tmpl2-thumb {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  background: #ffffff;
+}
+
+.tmpl2-thumb__border {
+  width: 100%;
+  height: 100%;
+  border: 1.5px solid #b8912f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 10px;
+  text-align: center;
+}
+
+.tmpl2-thumb__crescent {
+  color: #b8912f;
+  font-size: 1rem;
+}
+
+.tmpl2-thumb__bismillah {
+  font-family: var(--font-arabic);
+  font-size: 0.65rem;
+  color: #b8912f;
+}
+
+.tmpl2-thumb__names {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 6vw, 1.6rem);
+  color: #b8912f;
+  margin-top: 2px;
+}
+
+.tmpl2-thumb__amp {
+  font-style: italic;
+  color: #1a1a1a;
+  font-size: 0.7em;
+}
+
+.tmpl2-thumb__date {
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  color: #6b6b6b;
+  text-transform: uppercase;
+}

@@ -1,8 +1,18 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import templates from "../templates/registry";
+import templates, { RELIGIONS } from "../templates/registry";
 import "./home.css";
 
+const TABS = [{ id: "recommended", label: "Recommended" }, ...RELIGIONS];
+
 export default function Home() {
+  const [activeTab, setActiveTab] = useState("recommended");
+
+  const visibleTemplates =
+    activeTab === "recommended"
+      ? templates
+      : templates.filter((tmpl) => tmpl.religion === activeTab);
+
   return (
     <main className="home">
       <header className="home__header">
@@ -13,8 +23,23 @@ export default function Home() {
         </p>
       </header>
 
+      <div className="home__tabs" role="tablist" aria-label="Filter by religion">
+        {TABS.map((tab) => (
+          <button
+            key={tab.id}
+            type="button"
+            role="tab"
+            aria-selected={activeTab === tab.id}
+            className={`home__tab ${activeTab === tab.id ? "home__tab--active" : ""}`}
+            onClick={() => setActiveTab(tab.id)}
+          >
+            {tab.label}
+          </button>
+        ))}
+      </div>
+
       <div className="home__grid">
-        {templates.map((tmpl) => {
+        {visibleTemplates.map((tmpl) => {
           const Thumbnail = tmpl.thumbnail;
           const isReady = tmpl.status === "ready";
 

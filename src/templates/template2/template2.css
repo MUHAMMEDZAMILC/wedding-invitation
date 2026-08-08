@@ -1,0 +1,348 @@
+.t2 {
+  --t2-gold: #b8912f;
+  --t2-black: #1a1a1a;
+  --t2-gray: #6b6b6b;
+  background: #ffffff;
+  color: var(--t2-black);
+  min-height: 100vh;
+}
+
+.t2__card {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 18px;
+}
+
+.t2__border {
+  border: 2px solid var(--t2-gold);
+  padding: 10px;
+}
+
+.t2__inner {
+  border: 1px solid var(--t2-gold);
+  padding: 44px 22px;
+}
+
+.t2__section {
+  padding: 40px 0;
+  text-align: center;
+  border-bottom: 1px solid #eee2c4;
+}
+
+.t2__section:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.t2__crescent {
+  color: var(--t2-gold);
+  font-size: 1.6rem;
+}
+
+.t2__bismillah {
+  font-family: var(--font-arabic);
+  color: var(--t2-gold);
+  font-size: clamp(1.1rem, 4vw, 1.35rem);
+  margin-top: 10px;
+}
+
+.t2__eyebrow {
+  margin-top: 18px;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--t2-gray);
+}
+
+.t2__names {
+  margin-top: 10px;
+  font-size: clamp(2.2rem, 10vw, 3rem);
+  color: var(--t2-gold);
+}
+
+.t2__amp {
+  font-style: italic;
+  color: var(--t2-black);
+  font-size: 0.7em;
+}
+
+.t2__date {
+  margin-top: 10px;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  color: var(--t2-gold);
+}
+
+.t2__venue-line {
+  margin-top: 4px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--t2-gray);
+}
+
+.t2__heading {
+  font-size: clamp(1.5rem, 6vw, 1.9rem);
+  color: var(--t2-black);
+}
+
+.t2__subheading {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: var(--t2-gray);
+  line-height: 1.6;
+  max-width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.t2__divider {
+  margin: 20px auto 0;
+  width: 60px;
+  height: 1px;
+  background: var(--t2-gold);
+}
+
+.t2__story-grid {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.t2__person {
+  margin: 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.t2__frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1.2;
+  border: 2px solid var(--t2-gold);
+  overflow: hidden;
+}
+
+.t2__frame img {
+  position: absolute;
+  inset: 5px;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  object-fit: cover;
+  display: block;
+}
+
+.t2__frame--wide {
+  max-width: 260px;
+  margin: 28px auto 0;
+}
+
+.t2__person-name {
+  font-size: 1.1rem;
+  color: var(--t2-gold);
+}
+
+.t2__person-tagline {
+  font-size: 0.78rem;
+  color: var(--t2-gray);
+}
+
+.t2__caption {
+  margin-top: 14px;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--t2-black);
+}
+
+.t2__note-box {
+  margin-top: 24px;
+  border: 1px solid var(--t2-gold);
+  padding: 22px 18px;
+  text-align: left;
+}
+
+.t2__note-body {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--t2-black);
+}
+
+.t2__note-arabic {
+  margin-top: 16px;
+  font-family: var(--font-arabic);
+  color: var(--t2-gold);
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+.t2__note-translation {
+  margin-top: 10px;
+  font-style: italic;
+  font-size: 0.82rem;
+  color: var(--t2-gray);
+  text-align: center;
+}
+
+.t2__note-reference {
+  margin-top: 6px;
+  font-size: 0.75rem;
+  color: var(--t2-gold);
+  text-align: center;
+}
+
+.t2__countdown-grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.t2__countdown-unit {
+  border: 1px solid var(--t2-gold);
+  padding: 12px 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.t2__countdown-value {
+  font-size: clamp(1.3rem, 6vw, 1.7rem);
+  color: var(--t2-gold);
+  font-family: var(--font-display);
+}
+
+.t2__countdown-label {
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--t2-gray);
+}
+
+.t2__venue-name {
+  margin-top: 20px;
+  font-size: 1.3rem;
+  color: var(--t2-gold);
+}
+
+.t2__venue-address {
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: var(--t2-gray);
+}
+
+.t2__venue-time {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: var(--t2-black);
+  line-height: 1.8;
+}
+
+.t2__venue-blessing {
+  font-family: var(--font-arabic);
+  color: var(--t2-gold);
+}
+
+.t2__btn {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 12px 28px;
+  border: 1.5px solid var(--t2-gold);
+  color: var(--t2-gold);
+  text-decoration: none;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.t2__btn:hover,
+.t2__btn:focus-visible {
+  background: var(--t2-gold);
+  color: #fff;
+}
+
+.t2-form {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+.t2-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--t2-gold);
+}
+
+.t2-form__field input,
+.t2-form__field select,
+.t2-form__field textarea {
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 10px 12px;
+  border: 1px solid var(--t2-gold);
+  background: #fff;
+  color: var(--t2-black);
+  resize: vertical;
+}
+
+.t2-form__field input:focus,
+.t2-form__field select:focus,
+.t2-form__field textarea:focus {
+  outline: 1.5px solid var(--t2-gold);
+  outline-offset: 1px;
+}
+
+.t2-form__thanks {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.t2-form__thanks h3 {
+  color: var(--t2-gold);
+  font-size: 1.2rem;
+}
+
+.t2-form__thanks p {
+  font-size: 0.85rem;
+  color: var(--t2-gray);
+  max-width: 260px;
+}
+
+.t2__footer {
+  margin-top: 32px;
+  font-size: 0.78rem;
+  color: var(--t2-gray);
+}
+
+.t2__footer-note {
+  margin-top: 4px;
+  font-style: italic;
+  color: var(--t2-black);
+}
+
+@media (max-width: 380px) {
+  .t2__story-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .t2__inner {
+    padding: 32px 16px;
+  }
+}
