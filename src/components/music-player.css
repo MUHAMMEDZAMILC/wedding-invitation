@@ -1,0 +1,53 @@
+.music-toggle {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 50;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--color-gold);
+  background: var(--color-emerald-deep);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(14, 59, 46, 0.35);
+}
+
+.music-toggle:focus-visible {
+  outline: 2px solid var(--color-gold-light);
+  outline-offset: 3px;
+}
+
+.music-toggle__disc {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: spin 5s linear infinite;
+  animation-play-state: paused;
+}
+
+.music-toggle--playing .music-toggle__disc {
+  animation-play-state: running;
+}
+
+.music-toggle__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-gold-light);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

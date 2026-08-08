@@ -1,0 +1,99 @@
+.wishes-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.wishes-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-emerald-mid);
+}
+
+.wishes-form__field input,
+.wishes-form__field select,
+.wishes-form__field textarea {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 12px 14px;
+  border: 1px solid var(--color-gold-light);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--color-ink);
+  resize: vertical;
+}
+
+.wishes-form__field input:focus,
+.wishes-form__field select:focus,
+.wishes-form__field textarea:focus {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 1px;
+}
+
+.wishes-form__submit {
+  margin-top: 8px;
+  padding: 14px;
+  border: none;
+  border-radius: 999px;
+  background: var(--color-emerald-deep);
+  color: var(--color-ivory);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.wishes-form__submit:hover,
+.wishes-form__submit:focus-visible {
+  background: var(--color-gold);
+  color: var(--color-emerald-deep);
+  transform: translateY(-2px);
+}
+
+.wishes-form__thanks {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 24px 0;
+}
+
+.wishes-form__thanks-icon {
+  font-size: 2rem;
+}
+
+.wishes-form__thanks h3 {
+  color: var(--color-emerald-deep);
+  font-size: 1.4rem;
+}
+
+.wishes-form__thanks p {
+  font-size: 0.9rem;
+  opacity: 0.75;
+  max-width: 260px;
+}
+
+.wishes-form__again {
+  margin-top: 12px;
+  background: none;
+  border: 1px solid var(--color-emerald-deep);
+  color: var(--color-emerald-deep);
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.wishes-form__again:hover,
+.wishes-form__again:focus-visible {
+  background: var(--color-emerald-deep);
+  color: var(--color-ivory);
+}

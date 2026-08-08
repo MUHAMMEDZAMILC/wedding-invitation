@@ -1,0 +1,79 @@
+/* ── Design tokens ───────────────────────────────────────── */
+:root {
+  --color-emerald-deep: #0e3b2e;
+  --color-emerald-mid: #175a44;
+  --color-emerald-pale: #eaf1ec;
+  --color-gold: #c7a254;
+  --color-gold-light: #ead9a0;
+  --color-ivory: #fbf7ee;
+  --color-ink: #1c2b22;
+
+  --font-display: "Cormorant Garamond", "Times New Roman", serif;
+  --font-arabic: "Amiri", serif;
+  --font-body: "Jost", "Segoe UI", sans-serif;
+
+  --max-width: 520px;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--color-ivory);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: var(--color-gold-light);
+  color: var(--color-emerald-deep);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

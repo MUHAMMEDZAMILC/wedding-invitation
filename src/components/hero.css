@@ -1,0 +1,63 @@
+.hero {
+  padding: 72px 24px 56px;
+  text-align: center;
+  color: var(--color-ivory);
+  background: radial-gradient(
+      circle at 50% -10%,
+      rgba(199, 162, 84, 0.25),
+      transparent 55%
+    ),
+    linear-gradient(170deg, var(--color-emerald-deep), var(--color-emerald-mid));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.hero__crescent {
+  color: var(--color-gold);
+  margin-bottom: 4px;
+}
+
+.hero__bismillah {
+  font-family: var(--font-arabic);
+  font-size: clamp(1.1rem, 4vw, 1.4rem);
+  color: var(--color-gold-light);
+}
+
+.hero__greeting {
+  max-width: 320px;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  line-height: 1.6;
+  opacity: 0.85;
+  margin-top: 8px;
+}
+
+.hero__names {
+  font-size: clamp(2.6rem, 12vw, 3.6rem);
+  display: flex;
+  align-items: center;
+  gap: 0.35em;
+  margin-top: 6px;
+}
+
+.hero__amp {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--color-gold);
+  font-size: 0.65em;
+}
+
+.hero__date {
+  margin-top: 4px;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+}
+
+.hero__venue {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--color-gold-light);
+}

@@ -1,0 +1,20 @@
+.two-hearts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.two-hearts__frame {
+  width: 260px;
+  max-width: 80vw;
+}
+
+.two-hearts__caption {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.05rem;
+  text-align: center;
+  color: var(--color-emerald-deep);
+  max-width: 280px;
+}

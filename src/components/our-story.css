@@ -1,0 +1,33 @@
+.our-story__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.our-story__person {
+  margin: 0;
+  min-width: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.our-story__name {
+  font-size: 1.3rem;
+  color: var(--color-emerald-deep);
+}
+
+.our-story__tagline {
+  font-size: 0.78rem;
+  opacity: 0.7;
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+@media (max-width: 380px) {
+  .our-story__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}

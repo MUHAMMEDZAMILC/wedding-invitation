@@ -1,0 +1,119 @@
+.intro-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 32px;
+  text-align: center;
+  color: var(--color-ivory);
+  background: radial-gradient(
+      circle at 50% 0%,
+      rgba(199, 162, 84, 0.18),
+      transparent 60%
+    ),
+    linear-gradient(160deg, var(--color-emerald-deep), #082019 85%);
+  transition: opacity 0.7s ease, visibility 0.7s ease;
+}
+
+.intro-gate__pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.08;
+  background-image: radial-gradient(
+      circle,
+      var(--color-gold) 1px,
+      transparent 1.4px
+    );
+  background-size: 26px 26px;
+  pointer-events: none;
+}
+
+.intro-gate--closing {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.intro-gate__crescent {
+  color: var(--color-gold);
+  animation: float 4.5s ease-in-out infinite;
+}
+
+.intro-gate__bismillah {
+  font-family: var(--font-arabic);
+  font-size: clamp(1.1rem, 4vw, 1.5rem);
+  color: var(--color-gold-light);
+  margin: 0;
+}
+
+.intro-gate__label {
+  font-family: var(--font-body);
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  color: var(--color-gold-light);
+  margin-top: 6px;
+}
+
+.intro-gate__names {
+  font-size: clamp(2.4rem, 10vw, 3.4rem);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.intro-gate__amp {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--color-gold);
+  font-size: 0.7em;
+}
+
+.intro-gate__date {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  color: var(--color-ivory);
+  opacity: 0.85;
+}
+
+.intro-gate__button {
+  margin-top: 18px;
+  padding: 14px 38px;
+  background: transparent;
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold-light);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.intro-gate__button:hover,
+.intro-gate__button:focus-visible {
+  background: var(--color-gold);
+  color: var(--color-emerald-deep);
+  transform: translateY(-2px);
+}
+
+.intro-gate__button:focus-visible {
+  outline: 2px solid var(--color-gold-light);
+  outline-offset: 3px;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}

@@ -1,0 +1,22 @@
+.footer {
+  padding: 40px 24px 90px;
+  text-align: center;
+  background: var(--color-emerald-deep);
+  color: var(--color-gold-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer__names {
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+}
+
+.footer__note {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
