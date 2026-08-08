@@ -7,12 +7,15 @@
 import { lazy } from "react";
 import Thumbnail1 from "./template1/Thumbnail";
 import Thumbnail2 from "./template2/Thumbnail";
+import Thumbnail3 from "./template3/Thumbnail";
 
 const Template1 = lazy(() => import("./template1/Template1"));
 const Template2 = lazy(() => import("./template2/Template2"));
+const Template3 = lazy(() => import("./template3/Template3"));
 
 export const RELIGIONS = [
   { id: "muslim", label: "Muslim" },
+  { id: "hindu", label: "Hindu" },
 ];
 
 const templates = [
@@ -32,6 +35,15 @@ const templates = [
     component: Template2,
     thumbnail: Thumbnail2,
     religion: "muslim",
+    status: "ready",
+  },
+  {
+    id: "golden-mandala",
+    name: "Golden Mandala",
+    description: "A simple Hindu invitation — cream background, gold mandala accents & Ganesha invocation.",
+    component: Template3,
+    thumbnail: Thumbnail3,
+    religion: "hindu",
     status: "ready",
   },
   {

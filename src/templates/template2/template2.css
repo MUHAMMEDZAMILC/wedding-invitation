@@ -2,9 +2,19 @@
   --t2-gold: #b8912f;
   --t2-black: #1a1a1a;
   --t2-gray: #6b6b6b;
+  --t2-font-display: "Cormorant Garamond", serif;
+  --t2-font-arabic: "Amiri", serif;
+  --t2-font-body: "Montserrat", "Segoe UI", sans-serif;
   background: #ffffff;
   color: var(--t2-black);
+  font-family: var(--t2-font-body);
   min-height: 100vh;
+}
+
+.t2 h1,
+.t2 h2,
+.t2 h3 {
+  font-family: var(--t2-font-display);
 }
 
 .t2__card {
@@ -40,7 +50,7 @@
 }
 
 .t2__bismillah {
-  font-family: var(--font-arabic);
+  font-family: var(--t2-font-arabic);
   color: var(--t2-gold);
   font-size: clamp(1.1rem, 4vw, 1.35rem);
   margin-top: 10px;
@@ -172,7 +182,7 @@
 
 .t2__note-arabic {
   margin-top: 16px;
-  font-family: var(--font-arabic);
+  font-family: var(--t2-font-arabic);
   color: var(--t2-gold);
   text-align: center;
   font-size: 1.05rem;
@@ -212,7 +222,7 @@
 .t2__countdown-value {
   font-size: clamp(1.3rem, 6vw, 1.7rem);
   color: var(--t2-gold);
-  font-family: var(--font-display);
+  font-family: var(--t2-font-display);
 }
 
 .t2__countdown-label {
@@ -225,6 +235,7 @@
 .t2__venue-name {
   margin-top: 20px;
   font-size: 1.3rem;
+  font-family: var(--t2-font-display);
   color: var(--t2-gold);
 }
 
@@ -242,7 +253,7 @@
 }
 
 .t2__venue-blessing {
-  font-family: var(--font-arabic);
+  font-family: var(--t2-font-arabic);
   color: var(--t2-gold);
 }
 
@@ -344,5 +355,67 @@
 
   .t2__inner {
     padding: 32px 16px;
+  }
+}
+
+@media (min-width: 640px) {
+  .t2__card {
+    max-width: 640px;
+    padding: 28px;
+  }
+
+  .t2__inner {
+    padding: 56px 48px;
+  }
+
+  .t2__names {
+    font-size: clamp(2.6rem, 7vw, 3.4rem);
+  }
+
+  .t2__heading {
+    font-size: clamp(1.7rem, 4vw, 2.1rem);
+  }
+
+  .t2__story-grid {
+    gap: 32px;
+  }
+
+  .t2__countdown-grid {
+    gap: 16px;
+  }
+
+  .t2__frame--wide {
+    max-width: 320px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .t2__card {
+    max-width: 780px;
+    padding: 40px;
+  }
+
+  .t2__inner {
+    padding: 76px 68px;
+  }
+
+  .t2__section {
+    padding: 52px 0;
+  }
+
+  .t2__names {
+    font-size: clamp(2.8rem, 4.5vw, 3.6rem);
+  }
+
+  .t2__subheading {
+    max-width: 440px;
+  }
+
+  .t2__note-box {
+    padding: 30px 34px;
+  }
+
+  .t2__frame--wide {
+    max-width: 360px;
   }
 }

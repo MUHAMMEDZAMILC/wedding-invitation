@@ -1,0 +1,494 @@
+.t3 {
+  --t3-gold: #b8860b;
+  --t3-gold-deep: #8a6510;
+  --t3-maroon: #7a1f3d;
+  --t3-ink: #2e2417;
+  --t3-gray: #7a6f5c;
+  --t3-font-display: "Marcellus", serif;
+  --t3-font-devanagari: "Tiro Devanagari Hindi", serif;
+  --t3-font-body: "Lora", serif;
+  background: #fdf8ef;
+  color: var(--t3-ink);
+  font-family: var(--t3-font-body);
+  min-height: 100vh;
+}
+
+.t3 h1,
+.t3 h2,
+.t3 h3 {
+  font-family: var(--t3-font-display);
+}
+
+.t3__card {
+  position: relative;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 18px;
+}
+
+.t3__corner {
+  position: absolute;
+  width: 108px;
+  opacity: 0.95;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.t3__corner--tl {
+  top: 4px;
+  left: 4px;
+}
+
+.t3__corner--tr {
+  top: 4px;
+  right: 4px;
+  transform: scaleX(-1);
+}
+
+.t3__corner--bottom {
+  bottom: -6px;
+  left: 50%;
+  width: 160px;
+  transform: translateX(-50%);
+}
+
+.t3__border {
+  border: 2px solid var(--t3-gold);
+  padding: 10px;
+}
+
+.t3__inner {
+  border: 1px solid var(--t3-gold);
+  padding: 44px 22px;
+}
+
+.t3__section {
+  padding: 40px 0;
+  text-align: center;
+  border-bottom: 1px solid #ecdfc0;
+}
+
+.t3__section:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.t3__om {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto;
+  border: 1.5px solid var(--t3-gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--t3-font-devanagari);
+  font-size: 1.6rem;
+  color: var(--t3-gold-deep);
+}
+
+.t3__om img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+.t3__mantra {
+  margin-top: 14px;
+  font-family: var(--t3-font-devanagari);
+  color: var(--t3-gold-deep);
+  font-size: clamp(1.05rem, 4vw, 1.25rem);
+}
+
+.t3__mantra-translit {
+  margin-top: 4px;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--t3-gray);
+  font-style: italic;
+}
+
+.t3__eyebrow {
+  margin-top: 20px;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--t3-gray);
+}
+
+.t3__names {
+  margin-top: 10px;
+  font-size: clamp(2.2rem, 10vw, 3rem);
+  color: var(--t3-gold-deep);
+}
+
+.t3__amp {
+  font-style: italic;
+  color: var(--t3-maroon);
+  font-size: 0.7em;
+}
+
+.t3__date {
+  margin-top: 10px;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  color: var(--t3-maroon);
+}
+
+.t3__venue-line {
+  margin-top: 4px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--t3-gray);
+}
+
+.t3__heading {
+  font-size: clamp(1.5rem, 6vw, 1.9rem);
+  color: var(--t3-ink);
+}
+
+.t3__subheading {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: var(--t3-gray);
+  line-height: 1.6;
+  max-width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.t3__divider {
+  margin: 20px auto 0;
+  width: 120px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--t3-gold);
+}
+
+.t3__divider::before,
+.t3__divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: currentColor;
+}
+
+.t3__divider img {
+  height: 100%;
+  width: auto;
+}
+
+.t3__story-grid {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.t3__person {
+  margin: 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.t3__frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1.2;
+  border: 2px solid var(--t3-gold);
+  overflow: hidden;
+}
+
+.t3__frame img {
+  position: absolute;
+  inset: 5px;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  object-fit: cover;
+  display: block;
+}
+
+.t3__frame--wide {
+  max-width: 260px;
+  margin: 28px auto 0;
+}
+
+.t3__person-name {
+  font-size: 1.1rem;
+  color: var(--t3-gold-deep);
+}
+
+.t3__person-tagline {
+  font-size: 0.78rem;
+  color: var(--t3-gray);
+}
+
+.t3__caption {
+  margin-top: 14px;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--t3-ink);
+}
+
+.t3__note-box {
+  margin-top: 24px;
+  border: 1px solid var(--t3-gold);
+  padding: 22px 18px;
+}
+
+.t3__note-shloka {
+  font-family: var(--t3-font-devanagari);
+  color: var(--t3-gold-deep);
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+.t3__note-translation {
+  margin-top: 10px;
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--t3-ink);
+  text-align: center;
+  line-height: 1.6;
+}
+
+.t3__note-reference {
+  margin-top: 8px;
+  font-size: 0.75rem;
+  color: var(--t3-maroon);
+  text-align: center;
+}
+
+.t3__countdown-grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.t3__countdown-unit {
+  border: 1px solid var(--t3-gold);
+  padding: 12px 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.t3__countdown-value {
+  font-size: clamp(1.3rem, 6vw, 1.7rem);
+  color: var(--t3-gold-deep);
+  font-family: var(--t3-font-display);
+}
+
+.t3__countdown-label {
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--t3-gray);
+}
+
+.t3__venue-name {
+  margin-top: 20px;
+  font-size: 1.3rem;
+  font-family: var(--t3-font-display);
+  color: var(--t3-gold-deep);
+}
+
+.t3__venue-address {
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: var(--t3-gray);
+}
+
+.t3__venue-time {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: var(--t3-ink);
+  line-height: 1.8;
+}
+
+.t3__btn {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 12px 28px;
+  border: 1.5px solid var(--t3-gold);
+  color: var(--t3-gold-deep);
+  text-decoration: none;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.t3__btn:hover,
+.t3__btn:focus-visible {
+  background: var(--t3-gold);
+  color: #fff;
+}
+
+.t3-form {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+.t3-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--t3-gold-deep);
+}
+
+.t3-form__field input,
+.t3-form__field select,
+.t3-form__field textarea {
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 10px 12px;
+  border: 1px solid var(--t3-gold);
+  background: #fff;
+  color: var(--t3-ink);
+  resize: vertical;
+}
+
+.t3-form__field input:focus,
+.t3-form__field select:focus,
+.t3-form__field textarea:focus {
+  outline: 1.5px solid var(--t3-gold);
+  outline-offset: 1px;
+}
+
+.t3-form__thanks {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.t3-form__thanks h3 {
+  color: var(--t3-gold-deep);
+  font-size: 1.2rem;
+}
+
+.t3-form__thanks p {
+  font-size: 0.85rem;
+  color: var(--t3-gray);
+  max-width: 260px;
+}
+
+.t3__footer {
+  margin-top: 32px;
+  font-size: 0.78rem;
+  color: var(--t3-gray);
+}
+
+.t3__footer-note {
+  margin-top: 4px;
+  font-style: italic;
+  color: var(--t3-ink);
+}
+
+@media (max-width: 380px) {
+  .t3__story-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .t3__inner {
+    padding: 32px 16px;
+  }
+}
+
+@media (min-width: 640px) {
+  .t3__card {
+    max-width: 640px;
+    padding: 28px;
+  }
+
+  .t3__inner {
+    padding: 56px 48px;
+  }
+
+  .t3__names {
+    font-size: clamp(2.6rem, 7vw, 3.4rem);
+  }
+
+  .t3__heading {
+    font-size: clamp(1.7rem, 4vw, 2.1rem);
+  }
+
+  .t3__story-grid {
+    gap: 32px;
+  }
+
+  .t3__countdown-grid {
+    gap: 16px;
+  }
+
+  .t3__frame--wide {
+    max-width: 320px;
+  }
+
+  .t3__corner {
+    width: 140px;
+  }
+
+  .t3__corner--bottom {
+    width: 200px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .t3__card {
+    max-width: 780px;
+    padding: 40px;
+  }
+
+  .t3__inner {
+    padding: 76px 68px;
+  }
+
+  .t3__section {
+    padding: 52px 0;
+  }
+
+  .t3__names {
+    font-size: clamp(2.8rem, 4.5vw, 3.6rem);
+  }
+
+  .t3__subheading {
+    max-width: 440px;
+  }
+
+  .t3__note-box {
+    padding: 30px 34px;
+  }
+
+  .t3__frame--wide {
+    max-width: 360px;
+  }
+
+  .t3__corner {
+    width: 170px;
+  }
+
+  .t3__corner--bottom {
+    width: 240px;
+  }
+}
