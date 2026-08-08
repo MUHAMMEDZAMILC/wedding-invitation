@@ -71,10 +71,10 @@ function Reveal({ as: Tag = "div", className = "", delay = 0, children, ...rest 
   );
 }
 
-function TornEdge() {
+function TornEdge({ position = "bottom" }) {
   return (
     <svg
-      className="t4__tear"
+      className={`t4__tear t4__tear--${position}`}
       viewBox="0 0 1200 34"
       preserveAspectRatio="none"
       aria-hidden="true"
@@ -182,6 +182,7 @@ export default function Template4() {
 
       <Reveal as="div" className="t4__photo t4__photo--short">
         <img src={invitation.twoHearts.photo} alt="The couple laughing together" />
+        <TornEdge position="top" />
         <TornEdge />
       </Reveal>
 
@@ -210,6 +211,7 @@ export default function Template4() {
 
       <Reveal as="div" className="t4__photo t4__photo--short">
         <img src={invitation.twoHearts.photo} alt="The couple smiling together" />
+        <TornEdge position="top" />
         <TornEdge />
       </Reveal>
 
